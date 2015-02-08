@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 		</tr>
 	</thead>
 	<tbody>
+		<?php echo $order->email_order_items_table( $order->is_download_permitted(), false, $order->has_status( 'processing' ) ); ?>
 	</tbody>
 	<tfoot>
 		<?php
