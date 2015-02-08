@@ -644,4 +644,24 @@
     remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
     /* END REMOVE PRICES */
 
+    /**
+     * Change Add To Cart Text
+     */
+    add_filter( 'add_to_cart_text', 'woo_custom_cart_button_text' ); // < 2.1
+    add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_cart_button_text' ); // 2.1 +
+
+    function woo_custom_cart_button_text_1() {
+
+        return __( 'Enquire', 'woocommerce' );
+
+    }
+
+    add_filter( 'add_to_cart_text', 'woo_custom_cart_button_text' ); // < 2.1
+    add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_custom_cart_button_text' ); // 2.1 +
+
+    function woo_custom_cart_button_text() {
+
+        return __( 'Enquire', 'woocommerce' );
+    }
+
 ?>
