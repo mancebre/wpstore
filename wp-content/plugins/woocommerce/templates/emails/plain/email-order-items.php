@@ -29,6 +29,12 @@ foreach ( $items as $item_id => $item ) :
 	// Variation
 	echo $item_meta->meta ? "\n" . $item_meta->display( true, true ) : '';
 
+	// Quantity
+	echo "\n" . sprintf( __( 'Quantity: %s', 'woocommerce' ), $item['qty'] );
+
+	// Cost
+	echo "\n" . sprintf( __( 'Cost: %s', 'woocommerce' ), $order->get_formatted_line_subtotal( $item ) );
+
 	// Download URLs
 	if ( $show_download_links && $_product->exists() && $_product->is_downloadable() ) {
 		$download_files = $order->get_item_downloads( $item );
