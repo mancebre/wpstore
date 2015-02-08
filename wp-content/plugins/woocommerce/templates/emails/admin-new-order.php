@@ -1,2 +1,2 @@
 
-<?php echo $order->email_order_items_table( false, true ); ?>
+<?php echo $order->email_order_items_table(  ); ?>
