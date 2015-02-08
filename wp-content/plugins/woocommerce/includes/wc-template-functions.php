@@ -1181,7 +1181,7 @@ if ( ! function_exists( 'woocommerce_cart_totals' ) ) {
 	 * @return void
 	 */
 	function woocommerce_cart_totals() {
-		wc_get_template( 'cart/cart-totals.php' );
+		//wc_get_template( 'cart/cart-totals.php' );
 	}
 }
 

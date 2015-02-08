@@ -15,8 +15,7 @@ $order = wc_get_order( $order_id );
 <table class="shop_table order_details">
 	<thead>
 		<tr>
-			<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="product-total"><?php _e( 'Total', 'woocommerce' ); ?></th>
+            <th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -56,9 +55,6 @@ $order = wc_get_order( $order_id );
 							}
 						?>
 					</td>
-					<td class="product-total">
-						<?php echo $order->get_formatted_line_subtotal( $item ); ?>
-					</td>
 				</tr>
 				<?php
 
@@ -76,16 +72,6 @@ $order = wc_get_order( $order_id );
 		?>
 	</tbody>
 	<tfoot>
-	<?php
-		if ( $totals = $order->get_order_item_totals() ) foreach ( $totals as $total ) :
-			?>
-			<tr>
-				<th scope="row"><?php echo $total['label']; ?></th>
-				<td><?php echo $total['value']; ?></td>
-			</tr>
-			<?php
-		endforeach;
-	?>
 	</tfoot>
 </table>
 
